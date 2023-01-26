@@ -1,1 +1,2 @@
 # startup
+cout << "Hey" >> endl;
