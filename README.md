@@ -1,2 +1,2 @@
 # startup
-cout << "Hey from github" >> endl;
+cout << "Hey from VS studio" >> endl;
