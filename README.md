@@ -1,2 +1,2 @@
 # startup
-cout << "Hey" >> endl;
+cout << "Hey from github" >> endl;
