@@ -1,4 +1,3 @@
 # startup
-cout << "Hey from VS studio" >> endl;
-So far I have learned that saving files to github makes them much more accessible. Github will be super useful one day when I am either pair programming or have massive projects that I am working on.
+Have you ever been in a friend's home or in a church building and seen a picture of a temple that you didn't recognize? Don't worry, we've all been there. With the Temple Time app, you can compete with your friends to memorize all of the temples in the world! You may also vote for favorite temple.
 
