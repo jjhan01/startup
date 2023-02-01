@@ -20,3 +20,5 @@ Key features
 
 Website IP address:
 3.13.53.7
+Website URL:
+http://templemania.click
