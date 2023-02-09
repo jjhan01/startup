@@ -23,3 +23,5 @@ Website IP address:
 3.13.53.7
 Website URL:
 http://templemania.click
+
+During the Simon activity, I learned a lot about how to add on to my website.  It was really tricky for me to clone a new repository and get it to work.  It is important that the caddy file looks the way it should.  It is also really important that all of the simon files get set up or it wont run the way it should.  The deployFiles also needs to be an executable.
