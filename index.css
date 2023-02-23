@@ -17,7 +17,7 @@ header {
 
 footer {
   flex: 0 30px;
-  background: hsl(0, 0%, 100%);
+  background: hsl(0, 98%, 50%);
   color: rgb(60, 56, 56);
 }
 
@@ -28,11 +28,11 @@ main {
 }
 section:nth-child(1) {
   flex: .25;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 35%, 57%);
 }
 section:nth-child(2) {
   flex: 3;
-  background-color: white;
+  background-color: rgb(63, 45, 154);
 }
 
 @media (orientation: portrait) {
