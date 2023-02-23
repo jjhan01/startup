@@ -2,3 +2,48 @@
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100vh;
+}
+header {
+  flex: 0 80px;
+  background: hsl(223, 90%, 75%);
+}
+
+footer {
+  flex: 0 30px;
+  background: hsl(0, 0%, 100%);
+  color: rgb(60, 56, 56);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+section:nth-child(1) {
+  flex: .25;
+  background-color: hsl(0, 0%, 100%);
+}
+section:nth-child(2) {
+  flex: 3;
+  background-color: white;
+}
+
+@media (orientation: portrait) {
+  main {
+    flex-direction: column;
+  }
+}
+
+/* @media (max-height: 700px) {
+  header {
+
+  }
+  footer {
+
+  }
+} */
