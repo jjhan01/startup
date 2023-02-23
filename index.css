@@ -11,6 +11,8 @@ body {
 header {
   flex: 0 80px;
   background: hsl(223, 90%, 75%);
+  text-align: center;
+  font-family: Proxima-Soft-Bold;
 }
 
 footer {
