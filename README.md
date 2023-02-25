@@ -27,3 +27,5 @@ http://templemania.click
 During the Simon activity, I learned a lot about how to add on to my website.  It was really tricky for me to clone a new repository and get it to work.  It is important that the caddy file looks the way it should.  It is also really important that all of the simon files get set up or it wont run the way it should.  The deployFiles also needs to be an executable.
 
 From the Simon CSS activity, I learned how much CSS can add to the appearance of a website.  It is important that I set the sizes of the windows correctly or it will look wanky.
+
+After adding HTML and CSS to my startup project, I learned a lot about how to apply what I've learned to real life websites.  It is a lot more difficult to format in CSS than I thought it would be.
