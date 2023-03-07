@@ -29,3 +29,5 @@ During the Simon activity, I learned a lot about how to add on to my website.  I
 From the Simon CSS activity, I learned how much CSS can add to the appearance of a website.  It is important that I set the sizes of the windows correctly or it will look wanky.
 
 After adding HTML and CSS to my startup project, I learned a lot about how to apply what I've learned to real life websites.  It is a lot more difficult to format in CSS than I thought it would be.
+
+After adding JS to the Simon page, I learned a lot about the importance of formatting the page correctly.  JS has a very particular way that it likes code written in.  It will take me some time to get used to but once you know the correct format, getting the code to output what you want becomes a lot easier.
