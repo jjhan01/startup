@@ -31,3 +31,6 @@ From the Simon CSS activity, I learned how much CSS can add to the appearance of
 After adding HTML and CSS to my startup project, I learned a lot about how to apply what I've learned to real life websites.  It is a lot more difficult to format in CSS than I thought it would be.
 
 After adding JS to the Simon page, I learned a lot about the importance of formatting the page correctly.  JS has a very particular way that it likes code written in.  It will take me some time to get used to but once you know the correct format, getting the code to output what you want becomes a lot easier.
+
+From the Service Simon project, I learned how to use node.js to host front-end project files.  There were many new codes that I am learning for this new portion of the project which is tough for me to wrap my head around but it seems like after
+adding the front end service, it helps out significantly with login information and score keeping.
