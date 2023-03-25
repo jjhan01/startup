@@ -34,3 +34,5 @@ After adding JS to the Simon page, I learned a lot about the importance of forma
 
 From the Service Simon project, I learned how to use node.js to host front-end project files.  There were many new codes that I am learning for this new portion of the project which is tough for me to wrap my head around but it seems like after
 adding the front end service, it helps out significantly with login information and score keeping.
+
+From the Simon DB project, I learned the importance of using a program like mongodb to tie my program's information down.  It is a quick and easy way to protect info.
