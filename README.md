@@ -36,3 +36,7 @@ From the Service Simon project, I learned how to use node.js to host front-end p
 adding the front end service, it helps out significantly with login information and score keeping.
 
 From the Simon DB project, I learned the importance of using a program like mongodb to tie my program's information down.  It is a quick and easy way to protect info.
+
+From the Simon Login project, I learned secureApiRouter verifies credentials for endpoints. GetUser verifies credentials for the user. 
+
+From the Simon Websocket project, I learned that it is a lot more simple to have a peer chat than I had initially thought.  After starting up the connection, pretty much all that's left to do is push messages out.
