@@ -40,3 +40,5 @@ From the Simon DB project, I learned the importance of using a program like mong
 From the Simon Login project, I learned secureApiRouter verifies credentials for endpoints. GetUser verifies credentials for the user. 
 
 From the Simon Websocket project, I learned that it is a lot more simple to have a peer chat than I had initially thought.  After starting up the connection, pretty much all that's left to do is push messages out.
+
+From the Simon React project I learned that React converts our application from a multi-page application to a single page application. In a single page application, the browser only loads a single HTML file (index.html), and then we use JavaScript to interactively change the rendered content and components. This is a significant architectural shift to the application and will require you to reorganize your code to fit the single page, component driven, model.
