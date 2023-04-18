@@ -16,6 +16,8 @@ const choiceB = document.getElementById("B");
 
 const choiceC = document.getElementById("C");
 
+const choiceD = document.getElementById("D");
+
 const counter = document.getElementById("counter");
 
 const timeGauge = document.getElementById("timeGauge");
@@ -27,44 +29,48 @@ const scoreDiv = document.getElementById("scoreContainer");
 let questions = [
 
   {
-
-    question : "Where is this temple located?",
+      question : "",
 
       imgSrc : "favicon.ico",
 
-      choiceA : "Correct",
+      choiceA : "Salt Lake, UT",
 
-      choiceB : "Wrong",
+      choiceB : "Payson, UT",
 
-      choiceC : "Wrong",
+      choiceC : "San Diego, CA",
+
+      choiceD : "Orem, UT",
 
       correct : "A"
 
   },{
+      question : "",
 
-      question : "What does CSS stand for?",
+      imgSrc : "bostontemple.jpeg",
 
-      imgSrc : "img/css.png",
+      choiceA : "Los Angeles, CA",
 
-      choiceA : "Wrong",
+      choiceB : "Boston, MA",
 
-      choiceB : "Correct",
+      choiceC : "Buenos Aires, AR",
 
-      choiceC : "Wrong",
+      choiceD : "Laie, HI",
 
       correct : "B"
 
   },{
 
-      question : "What does JS stand for?",
+      question : "",
 
-      imgSrc : "img/js.png",
+      imgSrc : "buenos-aires.jpeg",
 
-      choiceA : "Wrong",
+      choiceA : "Paris, FR",
 
-      choiceB : "Wrong",
+      choiceB : "Ghana, AF",
 
-      choiceC : "Correct",
+      choiceC : "Buenos Aires, AR",
+
+      choiceD : "New York, NY",
 
       correct : "C"
 
@@ -76,7 +82,8 @@ let questions = [
 const lastQuestion = questions.length - 1;
 
 let runningQuestion = 0;
-
+renderQuestion();
+runningQuestion++;
 
 function renderQuestion(){
 
@@ -94,6 +101,8 @@ function renderQuestion(){
 
   choiceC.innerHTML = q.choiceC;
 
+  choiceD.innerHTML = q.choiceD;
+
 }
 
 
@@ -106,9 +115,22 @@ function renderProgress(){
   }
 
 }
+function correctA(){
+document.getElementById(runningQuestion).style.backgroundColor = "green";
+}
+function wrongA(){
+  document.getElementById(runningQuestion).style.backgroundColor = "red";
+}
+start.addEventListener("click",startQuiz);
 
-
-
+function startQuiz(){
+start.style.display = "none";
+renderQuestion();
+quiz.style.display = "block";
+renderProgress();
+renderCounter();
+TIMER = setInterval(renderCounter,1000);
+}
 
 
 

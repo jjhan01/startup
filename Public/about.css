@@ -1,9 +1,12 @@
 .picture-box {
-  height: calc(100px + 1em);
+  height: calc(300px + 1em);
+  width: 400px;
   margin-bottom: 1em;
   padding: 0.5em;
   background: rgb(223, 234, 247);
   border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .quote-box {
