@@ -2,6 +2,121 @@
 const GameEndEvent = 'gameEnd';
 const GameStartEvent = 'gameStart';
 
+const start = document.getElementById("start");
+
+const quiz = document.getElementById("quiz");
+
+const question = document.getElementById("question");
+
+const qImg = document.getElementById("qImg");
+
+const choiceA = document.getElementById("A");
+
+const choiceB = document.getElementById("B");
+
+const choiceC = document.getElementById("C");
+
+const counter = document.getElementById("counter");
+
+const timeGauge = document.getElementById("timeGauge");
+
+const progress = document.getElementById("progress");
+
+const scoreDiv = document.getElementById("scoreContainer");
+
+let questions = [
+
+  {
+
+    question : "Where is this temple located?",
+
+      imgSrc : "favicon.ico",
+
+      choiceA : "Correct",
+
+      choiceB : "Wrong",
+
+      choiceC : "Wrong",
+
+      correct : "A"
+
+  },{
+
+      question : "What does CSS stand for?",
+
+      imgSrc : "img/css.png",
+
+      choiceA : "Wrong",
+
+      choiceB : "Correct",
+
+      choiceC : "Wrong",
+
+      correct : "B"
+
+  },{
+
+      question : "What does JS stand for?",
+
+      imgSrc : "img/js.png",
+
+      choiceA : "Wrong",
+
+      choiceB : "Wrong",
+
+      choiceC : "Correct",
+
+      correct : "C"
+
+  }
+
+];
+
+
+const lastQuestion = questions.length - 1;
+
+let runningQuestion = 0;
+
+
+function renderQuestion(){
+
+  let q = questions[runningQuestion];
+
+ 
+
+  question.innerHTML = "<p>"+ q.question +"</p>";
+
+  qImg.innerHTML = "<img src="+ q.imgSrc +">";
+
+  choiceA.innerHTML = q.choiceA;
+
+  choiceB.innerHTML = q.choiceB;
+
+  choiceC.innerHTML = q.choiceC;
+
+}
+
+
+function renderProgress(){
+
+  for(let qIndex = 0; qIndex <= lastQuestion; qIndex++){
+
+      progress.innerHTML += "<div class='prog' id="+ qIndex +"></div>";
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
 const btnDescriptions = [
   { file: 'sound1.mp3', hue: 120 },
   { file: 'sound2.mp3', hue: 0 },
@@ -53,38 +168,12 @@ class Game {
     this.playerPlaybackPos = 0;
     this.mistakeSound = loadSound('error.mp3');
 
-    document.querySelectorAll('.game-button').forEach((el, i) => {
-      if (i < btnDescriptions.length) {
-        this.buttons.set(el.id, new Button(btnDescriptions[i], el));
-      }
-    });
+
 
     const playerNameEl = document.querySelector('.player-name');
     playerNameEl.textContent = this.getPlayerName();
 
     this.configureWebSocket();
-  }
-
-  async pressButton(button) {
-    if (this.allowPlayer) {
-      this.allowPlayer = false;
-      await this.buttons.get(button.id).press(1.0);
-
-      if (this.sequence[this.playerPlaybackPos].el.id === button.id) {
-        this.playerPlaybackPos++;
-        if (this.playerPlaybackPos === this.sequence.length) {
-          this.playerPlaybackPos = 0;
-          this.addButton();
-          this.updateScore(this.sequence.length - 1);
-          await this.playSequence();
-        }
-        this.allowPlayer = true;
-      } else {
-        this.saveScore(this.sequence.length - 1);
-        this.mistakeSound.play();
-        await this.buttonDance(2);
-      }
-    }
   }
 
   async reset() {
@@ -105,36 +194,13 @@ class Game {
     return localStorage.getItem('userName') ?? 'Mystery player';
   }
 
-  async playSequence() {
-    await delay(500);
-    for (const btn of this.sequence) {
-      await btn.press(1.0);
-      await delay(100);
-    }
-  }
-
-  addButton() {
-    const btn = this.getRandomButton();
-    this.sequence.push(btn);
-  }
 
   updateScore(score) {
     const scoreEl = document.querySelector('#score');
     scoreEl.textContent = score;
   }
 
-  async buttonDance(laps = 1) {
-    for (let step = 0; step < laps; step++) {
-      for (const btn of this.buttons.values()) {
-        await btn.press(0.0);
-      }
-    }
-  }
 
-  getRandomButton() {
-    let buttons = Array.from(this.buttons.values());
-    return buttons[Math.floor(Math.random() * this.buttons.size)];
-  }
 
   async saveScore(score) {
     const userName = this.getPlayerName();
@@ -235,3 +301,6 @@ function delay(milliseconds) {
 function loadSound(filename) {
   return new Audio('assets/' + filename);
 }
+
+
+

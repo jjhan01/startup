@@ -48,30 +48,72 @@
       
       
       <div class="game">
-        <img width="300px" height="200px" src="favicon.ico" alt="Photo of SLC Temple" class="game-image"/>
-        <div class="button-container">
-          <button
-            class="button-top-left"
-            onclick="game.pressButton(this)"
-            >New York</button>
-          
-          <button
-            class="button-top-right"
-            onclick="game.pressButton(this)"
-            >Buenos Aires</button>
-          </button>
-          <button
-            class="button-bottom-left"
-            onclick="game.pressButton(this)"
-            >Payson Utah</button>
-          </button>
-          <button
-            class="button-bottom-right"
-            onclick="game.pressButton(this)"
-            >Hong Kong</button>
-          </button>
-          
-        </div>
+      <!--<img width="300px" height="200px" src="favicon.ico" alt="Photo of SLC Temple" class="game-image"/>-->
+        <div id="container">
+
+          <div>
+            <button id="start">Start Quiz!</button>
+          </div>
+  
+          <div id="quiz" style="display: none">
+  
+              <div id="question"></div>
+  
+              <div id="qImg"></div>
+  
+              <div id="choices">
+  
+                <div class="button-container">
+                  <button
+                    class="choice"
+                    id="A"
+                    onclick="checkAnswer('A')"
+                    ></button>
+                  
+                  <button
+                    class="choice"
+                    id="B"
+                    onclick="checkAnswer('B')"
+                    ></button>
+                  </button>
+                  <button
+                    class="choice"
+                    id="C"
+                    onclick="checkAnswer('C')"
+                    ></button>
+                  </button>
+                  <button
+                    class="choice"
+                    id="D"
+                    onclick="checkAnswer('D')"
+                    ></button>
+                  </button>
+                  
+                </div>
+  
+              </div>
+  
+              <div id="timer">
+  
+                  <div id="counter"></div>
+  
+                  <div id="btimeGauge"></div>
+  
+                  <div id="timeGauge"></div>
+  
+              </div>
+  
+              <div id="progress"></div>
+  
+          </div>
+  
+          <div id="scoreContainer" style="display: none"></div>
+  
+      </div>
+  
+      <script src="quiz.js"></script>
+
+
       </div>
     </main>
 
