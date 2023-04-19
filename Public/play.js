@@ -18,14 +18,6 @@ const choiceC = document.getElementById("C");
 
 const choiceD = document.getElementById("D");
 
-const counter = document.getElementById("counter");
-
-const timeGauge = document.getElementById("timeGauge");
-
-const progress = document.getElementById("progress");
-
-const scoreDiv = document.getElementById("scoreContainer");
-
 let questions = [
 
   {
@@ -82,14 +74,32 @@ let questions = [
 const lastQuestion = questions.length - 1;
 
 let runningQuestion = 0;
-renderQuestion();
-runningQuestion++;
+let score = 0;
+
+function checkAnswer(answer){
+  if (questions[runningQuestion].correct = answer){
+    score++;
+    correctA();
+  }
+  else{
+    wrongA();
+  }
+  setTimeout(nextQ, 500);
+}
+function nextQ(){
+  if(runningQuestion < lastQuestion){
+    runningQuestion++;
+    renderQuestion();
+  }
+  else{
+    document.getElementById('quiz').style.display = 'none';
+    //saveScore(score);
+  }
+}
 
 function renderQuestion(){
 
   let q = questions[runningQuestion];
-
- 
 
   question.innerHTML = "<p>"+ q.question +"</p>";
 
@@ -116,7 +126,9 @@ function renderProgress(){
 
 }
 function correctA(){
-document.getElementById(runningQuestion).style.backgroundColor = "green";
+  document.body.style.backgroundColor = 'pink';
+  //updateScore(score);
+
 }
 function wrongA(){
   document.getElementById(runningQuestion).style.backgroundColor = "red";

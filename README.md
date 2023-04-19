@@ -43,4 +43,6 @@ From the Simon Websocket project, I learned that it is a lot more simple to have
 
 From the Simon React project I learned that React converts our application from a multi-page application to a single page application. In a single page application, the browser only loads a single HTML file (index.html), and then we use JavaScript to interactively change the rendered content and components. This is a significant architectural shift to the application and will require you to reorganize your code to fit the single page, component driven, model.
 
-After adding JS to my startup, I have come to realize that javascript is the backbone to a well run website.  Every little button needs to have JS to allow it to have any action at all.  I can and should use the internet to figure out all of the little things possible with Javascript.
+After adding JS to my startup, I have come to realize that javascript is the backbone to a well run website.  Every little button needs to have JS to allow it to have any action at all.  I can and should use the internet to figure out all of the little things possible with Javascript.  I added lots to my javascript starting with the login page, then moving onto the play, as well as the about page.  I mainly it to shuffle through different information and options.
+
+After adding the Mongo DB to my startup, it stood out to me how everything can go south just by mixing up a few different lines of code. It was easiest for me to use the same code as the Simon project and adjust it to fit my own needs.
