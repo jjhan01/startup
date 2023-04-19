@@ -93,7 +93,7 @@ function nextQ(){
   }
   else{
     document.getElementById('quiz').style.display = 'none';
-    //saveScore(score);
+   
   }
 }
 
@@ -127,7 +127,6 @@ function renderProgress(){
 }
 function correctA(){
   document.body.style.backgroundColor = 'pink';
-  //updateScore(score);
 
 }
 function wrongA(){
@@ -139,9 +138,7 @@ function startQuiz(){
 start.style.display = "none";
 renderQuestion();
 quiz.style.display = "block";
-renderProgress();
-renderCounter();
-TIMER = setInterval(renderCounter,1000);
+
 }
 
 
