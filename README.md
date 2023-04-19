@@ -46,3 +46,5 @@ From the Simon React project I learned that React converts our application from 
 After adding JS to my startup, I have come to realize that javascript is the backbone to a well run website.  Every little button needs to have JS to allow it to have any action at all.  I can and should use the internet to figure out all of the little things possible with Javascript.  I added lots to my javascript starting with the login page, then moving onto the play, as well as the about page.  I mainly it to shuffle through different information and options.
 
 After adding the Mongo DB to my startup, it stood out to me how everything can go south just by mixing up a few different lines of code. It was easiest for me to use the same code as the Simon project and adjust it to fit my own needs.
+
+I was unable to get the scores to save but other than that, I feel like the website works great.  I was able to learn so much about HTML, CSS, JS and everything inbetween while doing this assignment so I am pretty satisfied with my work.
